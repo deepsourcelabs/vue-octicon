@@ -41,8 +41,6 @@
 </style>
 
 <script>
-import { warn } from '../util'
-
 let icons = {}
 
 export default {
@@ -81,7 +79,6 @@ export default {
       let scale = this.scale
       scale = typeof scale === 'undefined' ? 1 : Number(scale)
       if (isNaN(scale) || scale <= 0) {
-        warn(`Invalid prop: prop "scale" should be a number over 0.`, this)
         return this.outerScale
       }
       return scale * this.outerScale
